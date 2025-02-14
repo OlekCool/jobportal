@@ -72,11 +72,12 @@
 
         </ul>
 
-        <img class="rounded-circle me-3"
-             height="50px"
-             width="50px"
-             th:if="${user.photosImagePath!=null}"
-             th:src="@{${user?.photosImagePath}}"
+        <img
+                class="rounded-circle me-3"
+                height="50px"
+                width="50x"
+                th:if="${user.photosImagePath!=null}"
+                th:src="@{${user?.photosImagePath}}"
         />
 
         <label th:if="${user.firstName != null && user.lastName != null}"
@@ -101,14 +102,8 @@
         <div class="box mt-3">
             <label class="large-label px-3 mb-3" sec:authorize="hasAuthority('Job Seeker')">Search Results</label>
             <th:block th:each="jobPost:${jobPost}">
-                <a
-                        th:href="@{/job-details-apply/{id}(id=${jobPost.jobPostId})}"
-                        style="text-decoration: none; color: black"
-                >
-                    <div
-                            onclick="window.location=/job-details-apply/{id}(id=${jobPost.jobPostId})"
-                            class="job-row"
-                    >
+                <a th:href="@{/job-details-apply/{id}(id=${jobPost.jobPostId})}" style="text-decoration: none; color: black">
+                    <div onclick="window.location=/job-details-apply/{id}(id=${jobPost.jobPostId})" class="job-row">
                         <div class="row">
                             <div class="col-md-4">
                                 <label class="job-title text-left">

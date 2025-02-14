@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### PROJECT ###
+src/main/resources/static/summernote
+src/main/resources/static/assets
+src/main/resources/static/fonts
+/src/main/resources/static/summernote/
